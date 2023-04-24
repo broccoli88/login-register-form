@@ -1,0 +1,42 @@
+/* Color palette: https://coolors.co/palette/264653-2a9d8f-e9c46a-f4a261-e76f51 */
+
+:root {
+	--color-charcoal: hsl(197, 37%, 24%);
+	--color-persian-green: hsl(173, 58%, 39%);
+	--color-saffron: hsl(43, 74%, 66%);
+	--color-sandy-brown: hsl(27, 87%, 67%);
+	--color-burnt-sienna: hsl(12, 76%, 61%);
+
+	--color-text: var(--color-charcoal);
+	--box-shadow: hsl(0, 0%, 0%, 0.05);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	position: relative;
+	font-weight: normal;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	min-height: 100vh;
+	color: var(--color-text);
+	background: linear-gradient(
+		45deg,
+		var(--color-saffron),
+		var(--color-sandy-brown),
+		var(--color-burnt-sienna)
+	);
+	line-height: 1.6;
+	font-family: "Poppins", sans-serif;
+	font-size: 15px;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

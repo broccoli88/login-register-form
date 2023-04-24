@@ -1,0 +1,16 @@
+@import "./base.css";
+
+#app {
+	max-width: 1280px;
+	height: 100vh;
+	margin: 0 auto;
+
+	display: grid;
+	place-items: center;
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--color-charcoal);
+}
