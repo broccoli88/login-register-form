@@ -8,7 +8,7 @@
 	--color-burnt-sienna: hsl(12, 76%, 61%);
 
 	--color-text: var(--color-charcoal);
-	--box-shadow: hsl(0, 0%, 0%, 0.05);
+	--box-shadow: hsl(0, 0%, 0%, 0.1);
 }
 
 *,
@@ -33,6 +33,7 @@ body {
 		var(--color-sandy-brown),
 		var(--color-burnt-sienna)
 	);
+	/* background-color: white; */
 	line-height: 1.6;
 	font-family: "Poppins", sans-serif;
 	font-size: 15px;
