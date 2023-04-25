@@ -1,7 +1,5 @@
 <script setup>
-	import Form from "./composables/Form.vue";
 	import CardTag from "./composables/CardTag.vue";
-	import Input from "./composables/Input.vue";
 	import Button from "./composables/Button.vue";
 	import SignInCard from "./components/SignInCard.vue";
 	import SignUpCard from "./components/SignUpCard.vue";
@@ -33,39 +31,12 @@
 				>Sign Up
 			</CardTag>
 		</div>
-
-		<!-- Method I -->
 		<transition name="switch" mode="out-in">
-			<component :is="cardStatus ? SignInCard : SignUpCard" />
+			<component
+				:is="cardStatus ? SignInCard : SignUpCard"
+				:card-status="cardStatus"
+			/>
 		</transition>
-
-		<!-- Method II -->
-
-		<!-- 
-		<SignInCard v-if="cardStatus" />
-		<SignUpCard v-else /> -->
-
-		<!-- Method III -->
-
-		<!-- <Form>
-			<template v-slot:legend>
-				{{ cardStatus ? "Sign In" : "Sign Up" }}
-			</template>
-			<template v-slot:signIn v-if="cardStatus">
-				<Input> Username </Input>
-				<Input> Password </Input>
-			</template>
-			<template v-slot:signUp v-else>
-				<Input> Username </Input>
-				<Input> Email </Input>
-				<Input> Password </Input>
-				<Input> Repeat Password </Input>
-			</template>
-		</Form> -->
-
-		<Button>
-			{{ cardStatus ? "Sign In" : "Sign Up" }}
-		</Button>
 	</div>
 </template>
 
